@@ -1,7 +1,14 @@
-div {
+div.bordered {
   width: 200px;
   height: 200px;
-  border: 5px solid red;
+  border: 5px solid rgb(0, 85, 255);
+}
+
+button {
+  font-size: 20px;
+  width: 100px;
+  height: 50px;
+  border: none;
 }
 
 p {

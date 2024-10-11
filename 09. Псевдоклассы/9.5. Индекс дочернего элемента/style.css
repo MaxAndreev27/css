@@ -13,6 +13,11 @@ div :nth-child(2) {
   color: darkblue;
 }
 
+/* выбор третьего дочернего элемента в div */
+div :nth-child(3) {
+  text-decoration: underline;
+}
+
 /*********************************************/
 
 table {
@@ -24,16 +29,27 @@ tr,
 th,
 td {
   border: 1px solid;
+  border-color: black;
   border-collapse: collapse; /* объединяет границы отдельных элементов таблицы */
 }
 
 th,
 td {
-  padding: 15px;
+  padding: 15px 25px;
   text-align: center;
 }
 
 /* можно также использовать "odd" */
-tr:nth-child(even) {
+tbody > tr:nth-child(even) {
+  color: white;
+  background-color: rgb(219, 125, 125);
+}
+
+tbody > tr:nth-child(odd) {
   background-color: lightgray;
+}
+
+thead > tr {
+  color: white;
+  background-color: brown;
 }

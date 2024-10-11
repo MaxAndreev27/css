@@ -1,10 +1,16 @@
-body {
-  margin: 70px;
+html {
+  /* Default 16px */
+  font-size: 20px;
 }
 
-p {
-  width: 750px;
+body {
+  margin: 30px;
+  font-size: 25px;
 }
+
+/* p {
+  width: 750px;
+} */
 
 .text-color {
   color: blue;
@@ -27,7 +33,7 @@ p {
 /*********************************************/
 
 .text-large {
-  font-size: 2rem; /* 2 * 16px = 32px */
+  font-size: 2rem; /* 2 * 20px = 40px */
   width: 100%;
 }
 
@@ -35,7 +41,7 @@ p {
 
 /* класс, позволяющий увеличить размер шрифта на 50% */
 .text-medium {
-  font-size: 1.5rem;
+  font-size: 1.5em; /* 1.5 * 25px = 37.5px */
 }
 
 .text-line-space {
@@ -63,13 +69,13 @@ p {
 }
 
 .text-line-through {
-  text-decoration: line-through;
+  /* text-decoration: line-through;
   text-decoration-style: wavy;
   text-decoration-color: red;
-  text-decoration-thickness: 3px;
+  text-decoration-thickness: 3px; */
 
   /* или сокращенное свойство */
-  /* text-decoration: line-through dashed red 3px; */
+  text-decoration: line-through dashed red 3px;
 }
 
 /*********************************************/
@@ -77,13 +83,13 @@ p {
 .text-left,
 .text-center,
 .text-right {
-  width: 100%;
   background-color: gold;
-  padding: 10px;
+  padding: 20px;
+  border: 5px solid lightseagreen;
 }
 
 .text-left {
-  text-align: left;
+  text-align: left; /* default */
 }
 
 .text-center {
@@ -95,6 +101,12 @@ p {
 }
 
 .text-justified {
-  width: 45%;
+  width: 75%;
   text-align: justify;
+}
+
+.list {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: green;
 }

@@ -3,7 +3,6 @@ body {
 }
 
 .hover-button {
-  margin-top: 30px;
   font-size: 1.3rem;
   background-color: #3498db;
   color: white;
@@ -14,5 +13,13 @@ body {
 }
 
 .hover-button:hover {
-  background-color: #2980b9; /* изменение цвета на более темный оттенок синего */
+  background-color: #b4dcf6; /* изменение цвета на более темный оттенок синего */
+  color: rgb(123, 118, 112);
+  box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.2);
+}
+
+.hover-button:active {
+  margin-top: 2px;
+  margin-left: 2px;
+  background-color: #8ec4e7;
 }

@@ -1,67 +1,112 @@
 body {
-  margin: 30px;
+    margin: 30px;
 }
 
 .box {
-  margin: 30px 0;
-  width: 150px;
-  height: 150px;
-  background-color: darkorange;
-  border-radius: 12px;
+    margin: 30px 0;
+    width: 150px;
+    height: 150px;
+    background-color: darkorange;
+    border-radius: 12px;
 }
 
 .move-xy {
-  animation-name: move;
-  animation-duration: 3s;
-  animation-timing-function: ease-out;
-  animation-delay: 2s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+    /* animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; */
 
-  /* или сокращенный вариант */
-  /* animation: move 3s ease-out 2s infinite alternate; */
+    /* или сокращенный вариант */
+    animation: move 3s ease-out 2s infinite alternate;
 }
 
 @keyframes move {
-  from {
-    translate: 0px 0px; /* начиная с начальной позиции */
-  }
-  to {
-    translate: 70px 100px; /* смещение 70px по оси X и на 100px по оси Y */
-  }
+    from {
+        translate: 0 0; /* начиная с начальной позиции */
+    }
+    to {
+        translate: 70px 100px; /* смещение 70px по оси X и на 100px по оси Y */
+    }
 }
 
 /*********************************************/
 
 .move-x {
-  background-color: burlywood;
-  margin-top: 130px;
-  animation: moveX 3s ease-in-out 0s infinite alternate;
+    background-color: burlywood;
+    margin-top: 130px;
+    animation: moveX 3s ease-in-out 0s infinite alternate;
 }
 
 @keyframes moveX {
-  from {
-    translate: 0px; /* начиная с начальной позиции */
-  }
-  to {
-    translate: 100%; /* 100% ширины */
-  }
+    from {
+        translate: 0; /* начиная с начальной позиции */
+    }
+    to {
+        translate: 100%; /* 100% ширины */
+    }
 }
 
 /*********************************************/
 
 .scale {
-  margin-top: 60px;
-  animation: size 2s ease-in-out 0s infinite alternate;
+    margin-top: 60px;
+    animation: size 2s ease-in-out 0s infinite alternate;
 }
 
 @keyframes size {
-  from {
-    scale: 1; /* начиная с 100% от исходного размера */
-    background-color: violet;
-  }
-  to {
-    scale: 1.2; /* увеличение на 20% от исходного размера */
-    background-color: darkmagenta;
-  }
+    from {
+        scale: 1; /* начиная с 100% от исходного размера */
+        background-color: violet;
+    }
+    to {
+        scale: 1.2; /* увеличение на 20% от исходного размера */
+        background-color: darkmagenta;
+    }
+}
+
+/*********************************************/
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: calc(50% - 50px);
+    margin-top: 50px;
+    border: 10px solid lightgrey;
+    border-right-color: green;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse-button {
+    font-size: 2rem;
+    background: crimson;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.pulse-button:hover {
+    animation: pulse 0.6s ease-out infinite;
 }

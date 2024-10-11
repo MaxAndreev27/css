@@ -14,7 +14,7 @@ p {
 
 .forced-inherit em {
   border: inherit;
-  padding: 5px;
+  padding: 0px;
 }
 
 /*********************************************/

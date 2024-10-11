@@ -1,4 +1,5 @@
-body {
+body,
+ul {
   margin: 0;
 }
 
@@ -7,7 +8,6 @@ h1 {
 }
 
 ul {
-  margin: 0;
   list-style-type: none;
 }
 
@@ -15,20 +15,21 @@ ul {
   background-color: bisque;
   padding: 10px 30px;
   font-size: 1.5rem;
-  height: 120px;
+  height: 140px;
   display: flex;
+  flex-direction: row; /* default */
   justify-content: space-between;
   align-items: center;
   gap: 12px;
 }
 
 .logo {
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .menu-item {
   cursor: pointer;
-  padding: 15px 0px;
+  padding: 15px 5px;
   border-radius: 8px;
   transition: background-color 0.3s ease-in;
 }
